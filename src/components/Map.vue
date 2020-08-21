@@ -5,7 +5,10 @@
 
     <hr/>
     <h1> Places Nearby:</h1>
-    {{placesNearby}}
+    <p v-for="place in placesNearbyMe.results" :key="place.place_id">
+      {{place.name}}
+      <img :src="place.photo_reference">
+    </p>
   </div>
 </template>
 <script>
@@ -13,7 +16,7 @@ import {mapState, mapActions} from 'vuex'
 export default {
   computed: {
     ...mapState({
-      placesNearby: state => state.place.placesNearby
+      placesNearbyMe: state => state.place.placesNearbyMe
     })
   },
   data() {

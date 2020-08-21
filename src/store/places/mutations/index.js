@@ -1,7 +1,7 @@
-import state from './../states'
+
 
 export default {
-    setNearbyPlacesByMyCoordinates(data) {
+    setNearbyPlacesByMyCoordinates(state, data) {
         state.placesNearbyMe = data
     }
 }

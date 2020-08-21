@@ -1,8 +1,12 @@
 const express = require('express')
 const request = require('request')
-// const serveStatic = require('serve-static')
+const serveStatic = require('serve-static')
+const cors = require('cors');
 const app = express()
-// app.use(serveStatic(__dirname + "/dist"))
+app.use(cors({
+    origin: '*'
+}))
+app.use(serveStatic(__dirname + "/dist"))
 const port = process.env.PORT || 5000
 
 app.get('/nearbysearch', async (req, res) => {
