@@ -6,7 +6,7 @@ const getPlacesNearby = ({coordinates}) => {
   +coordinates.lat+','+coordinates.lng
   +'&radius=5000'
   +'&language=pt-BR'
-  +'&key='+process.env.KEY
+  +'&key='+process.env.GOOGLE_KEY
   return axios.get(url).catch(error => {
     Promise.reject(error)
   })
