@@ -7,7 +7,9 @@ const getPlacesNearby = ({coordinates}) => {
   +'&radius=5000'
   +'&language=pt-BR'
   +'&key='+process.env.KEY
-  return axios.get(url)
+  return axios.get(url).catch(error => {
+    Promise.reject(error)
+  })
 }
 export default {
     getPlacesNearby

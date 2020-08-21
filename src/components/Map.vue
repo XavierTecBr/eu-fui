@@ -33,7 +33,9 @@ export default {
         this.coordinates = coordinates
         this.getNearby({coordinates})
       })
-      .catch(error => alert(error))
+      .catch(error => {
+        Promise.reject(error)
+      })
   },
   mounted() {
   }
