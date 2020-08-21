@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.7a09b4aa1f89e1476615aaf606d7ac12.js"
+  "/precache-manifest.f6a748a0b4a7cb9c082a5aeb265762de.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "eu-fui"});
